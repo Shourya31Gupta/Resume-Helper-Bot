@@ -1,0 +1,10 @@
+{
+  "name": "resume-checker",
+  "version": "1.0.0",
+  "description": "AI-powered resume analysis and improvement tool",
+  "main": "upload.js",
+  "dependencies": {
+    "@google/genai": "^1.13.0",
+    "pdf-parse": "^1.1.1"
+  }
+}
