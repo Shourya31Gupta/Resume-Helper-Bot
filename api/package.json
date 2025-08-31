@@ -1,0 +1,10 @@
+{
+  "name": "resume-checker-api",
+  "version": "1.0.0",
+  "description": "API for Resume Checker app",
+  "main": "upload.js",
+  "dependencies": {
+    "@google/genai": "^1.13.0",
+    "pdf-parse": "^1.1.1"
+  }
+}
