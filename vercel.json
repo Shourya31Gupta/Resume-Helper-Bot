@@ -1,14 +1,5 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "frontend/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    }
-  ],
   "functions": {
     "upload.js": {
       "runtime": "nodejs18.x"
@@ -18,10 +9,6 @@
     {
       "source": "/api/upload",
       "destination": "/upload.js"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/frontend/$1"
     }
   ]
 }
