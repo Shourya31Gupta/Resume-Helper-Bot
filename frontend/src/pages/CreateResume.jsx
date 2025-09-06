@@ -15,6 +15,7 @@ export default function CreateResume() {
     yearsOfExperience: "",
     skills: "",
     workExperience: "",
+    projects: "",
     education: "",
     certifications: "",
     additionalInfo: ""
@@ -312,7 +313,7 @@ export default function CreateResume() {
       case 3:
         return (
           <div className="space-y-6">
-            <h3 className="text-lg font-semibold text-slate-900">Work Experience</h3>
+            <h3 className="text-lg font-semibold text-slate-900">Work Experience & Projects</h3>
             <div className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-slate-700 mb-2">
@@ -322,9 +323,22 @@ export default function CreateResume() {
                   name="workExperience"
                   value={formData.workExperience}
                   onChange={handleInputChange}
-                  rows={8}
+                  rows={6}
                   className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="List your work experience in this format:&#10;Company Name - Job Title (Start Date - End Date)&#10;• Key achievement or responsibility&#10;• Another key achievement&#10;&#10;Previous Company - Previous Title (Start Date - End Date)&#10;• Key achievement or responsibility"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-2">
+                  Projects (Optional)
+                </label>
+                <textarea
+                  name="projects"
+                  value={formData.projects}
+                  onChange={handleInputChange}
+                  rows={4}
+                  className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="List your projects in this format:&#10;Project Name - Brief Description&#10;• Key features or technologies used&#10;• Results or impact&#10;&#10;Another Project - Description&#10;• Key features or technologies used"
                 />
               </div>
             </div>
