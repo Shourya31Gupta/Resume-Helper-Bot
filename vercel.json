@@ -1,0 +1,20 @@
+{
+  "functions": {
+    "api/upload.js": {
+      "runtime": "nodejs18.x"
+    },
+    "api/create-resume.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/upload",
+      "destination": "/api/upload.js"
+    },
+    {
+      "source": "/api/create-resume",
+      "destination": "/api/create-resume.js"
+    }
+  ]
+}

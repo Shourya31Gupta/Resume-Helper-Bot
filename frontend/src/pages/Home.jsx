@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType, Spacing, LevelFormat } from "docx";
@@ -73,11 +74,22 @@ export default function Home() {
       {/* Hero Section */}
       <div className="text-center space-y-4 animate-fade-in-up">
         <h1 className="text-4xl font-bold text-slate-900 sm:text-5xl">
-          AI-Powered Resume Analysis
+          AI-Powered Resume Tools
         </h1>
         <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-          Get professional feedback and an improved version of your resume using advanced AI technology
+          Analyze and improve existing resumes or create professional resumes from scratch using advanced AI technology
         </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
+          <Link 
+            to="/create"
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-medium rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-200 hover-lift shadow-lg"
+          >
+            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+            </svg>
+            Create New Resume
+          </Link>
+        </div>
       </div>
 
       {/* Upload Section */}
@@ -395,9 +407,9 @@ export default function Home() {
       {/* Features Section */}
       <div className="bg-white rounded-xl p-8 shadow-lg border border-slate-200 animate-fade-in-up">
         <h2 className="text-2xl font-bold text-slate-900 text-center mb-8">
-          Why Choose Our AI Resume Analyzer?
+          Why Choose Our AI Resume Tools?
         </h2>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="text-center space-y-3 hover-lift p-4 rounded-lg transition-all duration-200">
             <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto">
               <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -410,6 +422,15 @@ export default function Home() {
           <div className="text-center space-y-3 hover-lift p-4 rounded-lg transition-all duration-200">
             <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto">
               <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+            </div>
+            <h3 className="font-semibold text-slate-900">Create Resume</h3>
+            <p className="text-slate-600 text-sm">Build professional resumes from scratch with AI assistance</p>
+          </div>
+          <div className="text-center space-y-3 hover-lift p-4 rounded-lg transition-all duration-200">
+            <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto">
+              <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
               </svg>
             </div>
@@ -417,13 +438,13 @@ export default function Home() {
             <p className="text-slate-600 text-sm">Actionable advice to make your resume stand out</p>
           </div>
           <div className="text-center space-y-3 hover-lift p-4 rounded-lg transition-all duration-200">
-            <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto">
-              <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto">
+              <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
             </div>
-            <h3 className="font-semibold text-slate-900">Improved Version</h3>
-            <p className="text-slate-600 text-sm">Get a professionally rewritten resume ready to use</p>
+            <h3 className="font-semibold text-slate-900">Easy Download</h3>
+            <p className="text-slate-600 text-sm">Download as Word document ready for applications</p>
           </div>
         </div>
       </div>
